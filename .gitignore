@@ -1,0 +1,44 @@
+# Power BI / local cache
+.pbi/
+PowerBI/.pbi/
+*.pbi-tools/
+*.tmp
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# SQL / database local files
+*.db
+*.sqlite
+*.sqlite3
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs / temporary files
+*.log
+*.bak
+*.swp
+*.swo
+
+# Excel temporary files
+~$*.xlsx
+~$*.xls
+~$*.docx
+
+# Do not commit local credentials or connection exports
+*password*
+*secret*
+*credentials*
