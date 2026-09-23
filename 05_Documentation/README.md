@@ -1,62 +1,90 @@
-# SwiftCart E-Commerce BI Project
+# 🛒 SwiftCart E-Commerce BI Project
 
-## Project Overview
+> 📊 **End-to-end Business Intelligence project** for analyzing e-commerce sales, profitability, customers, products, cities, and rider performance.
 
-SwiftCart E-Commerce BI Project is an end-to-end business intelligence project built to analyze e-commerce sales and operational performance.
+---
 
-The project uses Python for supporting data-generation and validation scripts, SQL for database-side work, and Power BI for data modeling, DAX measures, interactive analysis, and dashboard reporting.
+## 🚀 Project Overview
 
-## Project Objectives
+SwiftCart E-Commerce BI is an end-to-end analytics solution built using **Python, SQL, Power BI, and DAX**.
 
-The dashboard provides visibility into:
+The project combines data preparation and validation, SQL/database work, dimensional modeling, business measures, and interactive Power BI dashboards into one complete BI workflow.
 
-- Revenue and profitability
-- Orders and quantity sold
-- Category performance
-- Revenue trends over time
-- Top cities by revenue
-- Top products by revenue
-- Customer-level performance
-- Rider performance and delivery fees
-- Year-based analysis and filtering
+### 🎯 Business Objectives
 
-## Technology Stack
+The dashboard helps analyze:
 
-- **Python** — data-generation and validation/support scripts
-- **SQL** — database and data validation work
-- **Power BI** — data modeling, DAX, visualization, drill-through and dashboarding
-- **DAX** — business measures and time-intelligence calculations
+- 💰 Revenue & profitability
+- 🛍️ Orders & quantity sold
+- 📦 Product & category performance
+- 📈 Revenue trends over time
+- 🏙️ City-level performance
+- 👥 Customer performance
+- 🛵 Rider performance & delivery fees
+- 📅 Year-based analysis
 
-## Project Structure
+---
+
+## 🧰 Technology Stack
+
+| Technology | Purpose |
+|---|---|
+| 🐍 **Python** | Data generation, quality checks & validation |
+| 🗄️ **SQL** | Database-side work & validation |
+| 📊 **Power BI** | Data modeling, visualization & dashboarding |
+| 📐 **DAX** | KPIs, calculations & time intelligence |
+
+---
+
+## 📁 Project Structure
 
 ```text
 SwiftCart_BI_Project/
-├── 01_Raw_Data/
+│
+├── 01_Raw_Data/                         # Local raw datasets
+│
 ├── 02_SQL/
-│   └── Python_Scripts/
-│       ├── check_data_quality.py
-│       ├── generate_master_data.py
-│       ├── generate_transaction_data.py
-│       ├── reconcile_orders.py
-│       └── validate_orders.py
+│   ├── Python_scripts/
+│   │   ├── check_data_quality.py
+│   │   ├── generate_master_data.py
+│   │   ├── generate_transaction_data.py
+│   │   ├── reconcile_orders.py
+│   │   └── validate_orders.py
+│   │
+│   └── swiftcart_sql.sql
+│
 ├── 03_PowerBI/
 │   └── Ecommerce_BI_Analytics_Dashboard.pbix
+│
 ├── 04_DAX/
+│   └── DAX_Measures.md
+│
 ├── 05_Documentation/
-├── 06_Screenshots/
-└── 07_Portfolio/
+│   ├── README.md
+│   ├── Data_Dictionary.xlsx
+│   ├── Project_Report.docx
+│   ├── SQL_Documentation.md
+│   └── PowerBI_Documentation.md
+│
+├── 06_Screenshots/                      # Dashboard screenshots
+│
+└── 07_Portfolio/                        # Portfolio materials
 ```
 
-## Data Model
+> 🔒 Raw data is kept outside the public GitHub repository when it may contain potentially sensitive information.
 
-The Power BI model is organized around fact and dimension tables.
+---
 
-### Fact Tables
+## 🧩 Data Model
+
+The Power BI model follows a **fact + dimension** structure.
+
+### 📌 Fact Tables
 
 - `FactOrder`
 - `FactOrderItem`
 
-### Dimension Tables
+### 📚 Dimension Tables
 
 - `DimDate`
 - `DimCustomer`
@@ -65,88 +93,107 @@ The Power BI model is organized around fact and dimension tables.
 - `DimWarehouse`
 - `DimCity`
 
-This structure supports analysis across orders, products, customers, riders, locations, warehouses and dates.
+This structure supports analysis across **orders, products, customers, riders, locations, warehouses, and dates**.
 
-## Power BI Dashboard
+---
 
-### Executive Overview
+# 📊 Power BI Dashboard
 
-The Executive Overview provides a high-level view of business performance.
+## 🏠 Executive Overview
 
-It includes KPIs such as:
+The Executive Overview provides a high-level view of overall business performance.
 
-- Net Revenue
-- Profit Margin %
-- Total Quantity
-- Total Orders
-- Total Profit
-- Total Discount
-- Average Order Value
-- Total Revenue
+### 💳 KPI Cards
 
-It also includes:
+- 💰 Net Revenue
+- 📈 Profit Margin %
+- 📦 Total Quantity
+- 🧾 Total Orders
+- 💵 Total Profit
+- 🏷️ Total Discount
+- 🛒 Average Order Value
+- 💰 Total Revenue
 
-- Revenue Contribution by Category
-- Monthly Revenue Trend
-- Top 10 Cities by Revenue
-- Total Profit by Category
-- Revenue Time Intelligence
-- Top 10 Products by Revenue
+### 📈 Key Visuals
 
-### Customer Analysis
+- 🥧 Revenue Contribution by Category
+- 📅 Monthly Revenue Trend
+- 🏙️ Top 10 Cities by Revenue
+- 📊 Total Profit by Category
+- ⏱️ Revenue Time Intelligence
+- 🏆 Top 10 Products by Revenue
 
-The Customer Analysis page focuses on customer performance and customer-level business analysis.
+---
 
-### Rider Analysis
+## 👥 Customer Analysis
 
-The Rider Analysis page includes:
+The Customer Analysis page focuses on:
 
-- Rider Performance
-- Top 10 Riders by Orders
-- Top 10 Riders by Delivery Fees
-- Top 10 Riders by Revenue
+- Customer performance
+- Revenue contribution
+- Order activity
+- Customer-level business analysis
 
-The Rider Performance table uses a Top 10 filter based on order count.
+---
 
-### Customer Details
+## 🛵 Rider Analysis
 
-The Customer Details page provides customer-level information through drill-through functionality.
+The Rider Analysis page covers:
+
+- 🛵 Rider Performance
+- 🏆 Top 10 Riders by Orders
+- 💰 Top 10 Riders by Delivery Fees
+- 📊 Top 10 Riders by Revenue
+
+The Rider Performance analysis uses a **Top 10 filter based on order count**.
+
+---
+
+## 🔎 Customer Details
+
+The Customer Details page provides detailed customer-level information through **Power BI drill-through**.
 
 Displayed information includes:
 
-- Customer Name
-- City
-- Age Group
-- Gender
-- Category Revenue
-- Total Orders
+- 👤 Customer Name
+- 🏙️ City
+- 🎂 Age Group
+- ⚧️ Gender
+- 📊 Category Revenue
+- 🧾 Total Orders
 
-### Customer Tooltip
+---
 
-A dedicated Customer Tooltip page is included for contextual customer metrics using Power BI tooltip functionality.
+## 💬 Customer Tooltip
 
-## DAX / Analytics
+A dedicated **Customer Tooltip** page provides contextual customer metrics when used through Power BI tooltip functionality.
 
-The Power BI model contains measures for business KPIs and time-based analysis, including measures related to:
+---
 
-- Revenue
-- Net Revenue
-- Profit
-- Profit Margin
-- Orders
-- Quantity
-- Discount
-- Average Order Value
-- Category Revenue
-- Revenue LY
-- Revenue MTD
-- Revenue YTD
-- Revenue YoY %
-- Revenue Rank
+# 📐 DAX & Analytics
 
-## Data Quality and Validation
+The Power BI model contains measures for:
 
-The project includes Python support scripts for data quality and transaction validation:
+- 💰 Revenue
+- 💵 Net Revenue
+- 📈 Profit
+- 📊 Profit Margin
+- 🧾 Orders
+- 📦 Quantity
+- 🏷️ Discount
+- 🛒 Average Order Value
+- 🗂️ Category Revenue
+- 📅 Revenue LY
+- 📆 Revenue MTD
+- 📆 Revenue YTD
+- 📈 Revenue YoY %
+- 🏆 Revenue Rank
+
+---
+
+# 🧪 Data Quality & Validation
+
+Python support scripts are included for data generation and validation:
 
 - `check_data_quality.py`
 - `generate_master_data.py`
@@ -154,35 +201,90 @@ The project includes Python support scripts for data quality and transaction val
 - `reconcile_orders.py`
 - `validate_orders.py`
 
-These scripts are organized separately from the Power BI report.
+These scripts support the data-quality and transaction-validation workflow before analysis.
 
-## Interactive Features
+---
+
+# 🎛️ Interactive Features
 
 The Power BI solution includes:
 
-- Year filtering
-- Visual-level Top N filtering
-- Cross-filtering between visuals
-- Drill-through
-- Tooltip page
-- Interactive dashboard visuals
+- 📅 Year filtering
+- 🔝 Top N filtering
+- 🔄 Cross-filtering
+- 🔎 Drill-through
+- 💬 Tooltip pages
+- 📊 Interactive dashboard visuals
 
-## Project Outcome
+---
 
-The completed project provides a centralized analytical dashboard for exploring e-commerce revenue, profitability, customers, products, cities and rider performance.
+# 🔄 BI Workflow
 
-The solution combines structured data preparation, SQL/database work, dimensional modeling, DAX calculations and Power BI visualization into a single BI project.
+```text
+🐍 Python
+   ↓
+🗄️ SQL
+   ↓
+📐 Fact + Dimension Model
+   ↓
+📊 Power BI
+   ↓
+📐 DAX Measures
+   ↓
+📈 Interactive Dashboard
+```
 
-## Main Project Files
+---
 
-Power BI report:
+# 🏁 Project Outcome
+
+SwiftCart BI provides a centralized analytical solution for exploring:
+
+**Revenue • Profitability • Orders • Products • Customers • Cities • Riders**
+
+The project demonstrates an end-to-end BI workflow covering:
+
+**Data Preparation → SQL → Data Modeling → DAX → Visualization → Business Analysis**
+
+---
+
+## 📂 Main Project Files
+
+### 📊 Power BI Report
 
 `03_PowerBI/Ecommerce_BI_Analytics_Dashboard.pbix`
 
-Supporting Python scripts:
+### 🐍 Python Scripts
 
-`02_SQL/Python_Scripts/`
+`02_SQL/Python_scripts/`
 
-Documentation:
+### 🗄️ SQL
+
+`02_SQL/swiftcart_sql.sql`
+
+### 📐 DAX
+
+`04_DAX/DAX_Measures.md`
+
+### 📚 Documentation
 
 `05_Documentation/`
+
+---
+
+## ⭐ Project Highlights
+
+- 🔹 End-to-end BI workflow
+- 🔹 Dimensional data model
+- 🔹 SQL + Python data preparation
+- 🔹 DAX business measures
+- 🔹 Time-intelligence analysis
+- 🔹 Top 10 business analysis
+- 🔹 Drill-through & tooltip functionality
+- 🔹 Interactive Power BI reporting
+
+---
+
+### 👨‍💻 SwiftCart E-Commerce BI
+
+**Built with Python • SQL • Power BI • DAX**
